@@ -1,12 +1,10 @@
-# VxCoffeeShop
+# VxEmployeePayroll
 
-An initial assignment/project for ComSci. 
-###### btw the sign up feature is incomplete, you may use anonymous acc
+Term 4 project for IBDP Computer Science. 
 
-## How to run
+## Running the App
 
-1. Download the .zip file in latest release
-2. Unzip and go to the folder `VxCoffeeSop`
-3. Open/run the 'VxCoffeeShop' alias/shortcut file
-4. Wait until login page load and get shopping!
+Please install [JavaFX SDK](https://openjfx.io/) to your system.
+After that,
 
+`./mvnw javafx:run`

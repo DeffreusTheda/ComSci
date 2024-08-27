@@ -1,4 +1,4 @@
-/********************************************************************************
+/* ******************************************************************************
  * Copyright (c) 2024 Deffreus Theda
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -20,22 +20,23 @@
  * SOFTWARE.
  *******************************************************************************/
 
-package comsci.cs_coffeeshop;
+package org.effie.payroll;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.util.Pair;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
-public class CoffeeShop extends Application {
+public class EmployeePayroll extends Application {
     protected static Stage primaryStage;
     protected static Scene loginStage, shopScene;
-    static String[][] account =
-            {{"admin"},   // Username
-                    {"4|)|\\/|!|\\|"}}; // Password
+    static List<Pair<String, String>> account = new ArrayList<>();
     static boolean authenticationSuccessful = false;
     static String[] identity = {"", ""};
 
@@ -43,15 +44,18 @@ public class CoffeeShop extends Application {
         authenticationSuccessful = true;
         identity[0] = name;
         identity[1] = pass;
-        CoffeeShop.primaryStage.setScene(CoffeeShop.shopScene);
+        EmployeePayroll.primaryStage.setScene(EmployeePayroll.shopScene);
     }
 
     @Override
     public void start(Stage stage) throws IOException {
+        // initial account
+        account.add(new Pair<>("admin", "admin"));
+
         primaryStage = stage;
         loginStage = new Scene(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("login.fxml"))));
-        shopScene = new Scene(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("shop.fxml"))));
-        primaryStage.setTitle("Volistic Coffee Shop");
+        shopScene = new Scene(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("payroll.fxml"))));
+        primaryStage.setTitle("Employee Payroll App");
         primaryStage.setScene(loginStage);
         primaryStage.show();
     }

@@ -12,6 +12,6 @@ module comsci.cs_coffeeshop {
     requires com.almasb.fxgl.all;
     requires java.sql;
 
-    opens comsci.cs_coffeeshop to javafx.fxml;
-    exports comsci.cs_coffeeshop;
+    opens org.effie.payroll to javafx.fxml;
+    exports org.effie.payroll;
 }

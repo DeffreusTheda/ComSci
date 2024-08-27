@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Insets?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.effie.payroll.Controller"
+            prefHeight="400.0" prefWidth="600.0">
+    <VBox xmlns:fx="http://javafx.com/fxml" spacing="10" alignment="CENTER">
+        <padding>
+            <Insets top="20" right="20" bottom="20" left="20"/>
+        </padding>
+
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="KODE KARYAWAN"/>
+            <TextField fx:id="employeeCodeField"/>
+        </HBox>
+
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="NAMA KARYAWAN"/>
+            <TextField fx:id="employeeNameField" HBox.hgrow="ALWAYS"/>
+        </HBox>
+
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="GOLONGAN"/>
+            <ComboBox fx:id="employeeGradeCombo">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="ia"/>
+                        <String fx:value="ib"/>
+                        <String fx:value="ic"/>
+                        <String fx:value="id"/>
+                        <String fx:value="iia"/>
+                        <String fx:value="iib"/>
+                        <String fx:value="iic"/>
+                        <String fx:value="iid"/>
+                        <String fx:value="iiia"/>
+                        <String fx:value="iiib"/>
+                        <String fx:value="iiic"/>
+                        <String fx:value="iiid"/>
+                        <String fx:value="iva"/>
+                        <String fx:value="ivb"/>
+                        <String fx:value="ivc"/>
+                        <String fx:value="ivd"/>
+                        <String fx:value="ive"/>
+                    </FXCollections>
+                </items>
+            </ComboBox>
+        </HBox>
+
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="STATUS"/>
+            <fx:define>
+                <ToggleGroup fx:id="maritalStatusGroup"/>
+            </fx:define>
+            <RadioButton text="MENIKAH" toggleGroup="$maritalStatusGroup" selected="true" fx:id="marriedRadioButton"/>
+            <RadioButton text="BELUM MENIKAH" toggleGroup="$maritalStatusGroup"/>
+        </HBox>
+
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="JUMLAH ANAK"/>
+            <TextField fx:id="childrenCountField" text="0"/>
+        </HBox>
+
+        <Button text="HITUNG GAJI BERSIH" onAction="#calculateSalary"/>
+
+        <TextArea fx:id="resultArea" editable="false" prefRowCount="7" VBox.vgrow="ALWAYS"/>
+    </VBox>
+</AnchorPane>

@@ -4,10 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>ComSci</groupId>
-    <artifactId>CS_CoffeeShop</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <name>CS_CoffeeShop</name>
+    <groupId>org.effie</groupId>
+    <artifactId>payroll</artifactId>
+    <version>0.1</version>
+    <name>payroll</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -133,10 +133,10 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>comsci.cs_coffeeshop/comsci.cs_coffeeshop.CoffeeShop</mainClass>
-                            <launcher>VxCoffeeShop</launcher>
-                            <jlinkZipName>VxCoffeeShop</jlinkZipName>
-                            <jlinkImageName>VxCoffeeShop</jlinkImageName>
+                            <mainClass>comsci.cs_coffeeshop/org.effie.payroll.EmployeePayroll</mainClass>
+                            <launcher>VxEmployeePayroll</launcher>
+                            <jlinkZipName>VxEmployeePayroll</jlinkZipName>
+                            <jlinkImageName>VxEmployeePayroll</jlinkImageName>
                             <noManPages>true</noManPages>
                             <stripDebug>true</stripDebug>
                             <noHeaderFiles>true</noHeaderFiles>

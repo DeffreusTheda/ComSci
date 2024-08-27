@@ -28,7 +28,7 @@ SOFTWARE.
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
             minWidth="-Infinity"
             prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21"
-            fx:controller="comsci.cs_coffeeshop.Controller">
+            fx:controller="org.effie.payroll.Controller">
     <children>
         <Label alignment="CENTER" contentDisplay="CENTER" layoutY="60.0" prefWidth="1000.0"
                text="Please Sign In to Continue">
